@@ -31,19 +31,17 @@ namespace Alsoltan_System
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlSidebar = new System.Windows.Forms.Panel();
-            this.btnSalesInvoices = new System.Windows.Forms.Button();
+            this.btnSalesReport = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnPurchaseReport = new System.Windows.Forms.Button();
+            this.btnSalesInvoices = new System.Windows.Forms.Button();
             this.btnPurchaseInvoices = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
             this.btnSuppliers = new System.Windows.Forms.Button();
-            this.btnSalesReportt = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.btnPurchaseReport = new System.Windows.Forms.Button();
-            this.btnSalesReport = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.SuspendLayout();
@@ -58,8 +56,6 @@ namespace Alsoltan_System
             this.pnlSidebar.Controls.Add(this.btnPurchaseInvoices);
             this.pnlSidebar.Controls.Add(this.btnCustomers);
             this.pnlSidebar.Controls.Add(this.btnSuppliers);
-            this.pnlSidebar.Controls.Add(this.btnSalesReportt);
-            this.pnlSidebar.Controls.Add(this.button1);
             this.pnlSidebar.Controls.Add(this.btnProducts);
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
@@ -69,25 +65,25 @@ namespace Alsoltan_System
             this.pnlSidebar.MouseEnter += new System.EventHandler(this.pnlSidebar_MouseEnter);
             this.pnlSidebar.MouseLeave += new System.EventHandler(this.pnlSidebar_MouseLeave);
             // 
-            // btnSalesInvoices
+            // btnSalesReport
             // 
-            this.btnSalesInvoices.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalesInvoices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSalesInvoices.FlatAppearance.BorderSize = 0;
-            this.btnSalesInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalesInvoices.Font = new System.Drawing.Font("Niagara Engraved", 13F, System.Drawing.FontStyle.Bold);
-            this.btnSalesInvoices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalesInvoices.ImageKey = "sales1.png";
-            this.btnSalesInvoices.ImageList = this.imageList1;
-            this.btnSalesInvoices.Location = new System.Drawing.Point(0, 468);
-            this.btnSalesInvoices.Name = "btnSalesInvoices";
-            this.btnSalesInvoices.Size = new System.Drawing.Size(56, 78);
-            this.btnSalesInvoices.TabIndex = 6;
-            this.btnSalesInvoices.Tag = "فواتير المبيعات";
-            this.btnSalesInvoices.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalesInvoices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSalesInvoices.UseVisualStyleBackColor = true;
-            this.btnSalesInvoices.Click += new System.EventHandler(this.btnSalesInvoices_Click);
+            this.btnSalesReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalesReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalesReport.FlatAppearance.BorderSize = 0;
+            this.btnSalesReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalesReport.Font = new System.Drawing.Font("Niagara Engraved", 13F, System.Drawing.FontStyle.Bold);
+            this.btnSalesReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalesReport.ImageKey = "report.png";
+            this.btnSalesReport.ImageList = this.imageList1;
+            this.btnSalesReport.Location = new System.Drawing.Point(0, 468);
+            this.btnSalesReport.Name = "btnSalesReport";
+            this.btnSalesReport.Size = new System.Drawing.Size(56, 78);
+            this.btnSalesReport.TabIndex = 8;
+            this.btnSalesReport.Tag = "تقرير المبيعات";
+            this.btnSalesReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalesReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalesReport.UseVisualStyleBackColor = true;
+            this.btnSalesReport.Click += new System.EventHandler(this.btnSalesReport_Click_1);
             // 
             // imageList1
             // 
@@ -101,6 +97,47 @@ namespace Alsoltan_System
             this.imageList1.Images.SetKeyName(5, "purchase.png");
             this.imageList1.Images.SetKeyName(6, "purchases.png");
             this.imageList1.Images.SetKeyName(7, "sales1.png");
+            this.imageList1.Images.SetKeyName(8, "purchaseReport.png");
+            // 
+            // btnPurchaseReport
+            // 
+            this.btnPurchaseReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPurchaseReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPurchaseReport.FlatAppearance.BorderSize = 0;
+            this.btnPurchaseReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchaseReport.Font = new System.Drawing.Font("Niagara Engraved", 13F, System.Drawing.FontStyle.Bold);
+            this.btnPurchaseReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPurchaseReport.ImageKey = "purchaseReport.png";
+            this.btnPurchaseReport.ImageList = this.imageList1;
+            this.btnPurchaseReport.Location = new System.Drawing.Point(0, 390);
+            this.btnPurchaseReport.Name = "btnPurchaseReport";
+            this.btnPurchaseReport.Size = new System.Drawing.Size(56, 78);
+            this.btnPurchaseReport.TabIndex = 7;
+            this.btnPurchaseReport.Tag = "تقرير المشتريات";
+            this.btnPurchaseReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPurchaseReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPurchaseReport.UseVisualStyleBackColor = true;
+            this.btnPurchaseReport.Click += new System.EventHandler(this.btnPurchaseReport_Click);
+            // 
+            // btnSalesInvoices
+            // 
+            this.btnSalesInvoices.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalesInvoices.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalesInvoices.FlatAppearance.BorderSize = 0;
+            this.btnSalesInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalesInvoices.Font = new System.Drawing.Font("Niagara Engraved", 13F, System.Drawing.FontStyle.Bold);
+            this.btnSalesInvoices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalesInvoices.ImageKey = "sales1.png";
+            this.btnSalesInvoices.ImageList = this.imageList1;
+            this.btnSalesInvoices.Location = new System.Drawing.Point(0, 312);
+            this.btnSalesInvoices.Name = "btnSalesInvoices";
+            this.btnSalesInvoices.Size = new System.Drawing.Size(56, 78);
+            this.btnSalesInvoices.TabIndex = 6;
+            this.btnSalesInvoices.Tag = "فواتير المبيعات";
+            this.btnSalesInvoices.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalesInvoices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalesInvoices.UseVisualStyleBackColor = true;
+            this.btnSalesInvoices.Click += new System.EventHandler(this.btnSalesInvoices_Click);
             // 
             // btnPurchaseInvoices
             // 
@@ -112,7 +149,7 @@ namespace Alsoltan_System
             this.btnPurchaseInvoices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPurchaseInvoices.ImageKey = "purchases.png";
             this.btnPurchaseInvoices.ImageList = this.imageList1;
-            this.btnPurchaseInvoices.Location = new System.Drawing.Point(0, 390);
+            this.btnPurchaseInvoices.Location = new System.Drawing.Point(0, 234);
             this.btnPurchaseInvoices.Name = "btnPurchaseInvoices";
             this.btnPurchaseInvoices.Size = new System.Drawing.Size(56, 78);
             this.btnPurchaseInvoices.TabIndex = 5;
@@ -132,7 +169,7 @@ namespace Alsoltan_System
             this.btnCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCustomers.ImageKey = "customers.png";
             this.btnCustomers.ImageList = this.imageList1;
-            this.btnCustomers.Location = new System.Drawing.Point(0, 312);
+            this.btnCustomers.Location = new System.Drawing.Point(0, 156);
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.Size = new System.Drawing.Size(56, 78);
             this.btnCustomers.TabIndex = 4;
@@ -152,7 +189,7 @@ namespace Alsoltan_System
             this.btnSuppliers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSuppliers.ImageKey = "supplier.png";
             this.btnSuppliers.ImageList = this.imageList1;
-            this.btnSuppliers.Location = new System.Drawing.Point(0, 234);
+            this.btnSuppliers.Location = new System.Drawing.Point(0, 78);
             this.btnSuppliers.Name = "btnSuppliers";
             this.btnSuppliers.Size = new System.Drawing.Size(56, 78);
             this.btnSuppliers.TabIndex = 3;
@@ -161,45 +198,6 @@ namespace Alsoltan_System
             this.btnSuppliers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSuppliers.UseVisualStyleBackColor = true;
             this.btnSuppliers.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnSalesReportt
-            // 
-            this.btnSalesReportt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalesReportt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSalesReportt.FlatAppearance.BorderSize = 0;
-            this.btnSalesReportt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalesReportt.Font = new System.Drawing.Font("Niagara Engraved", 13F, System.Drawing.FontStyle.Bold);
-            this.btnSalesReportt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalesReportt.ImageKey = "report.png";
-            this.btnSalesReportt.ImageList = this.imageList1;
-            this.btnSalesReportt.Location = new System.Drawing.Point(0, 156);
-            this.btnSalesReportt.Name = "btnSalesReportt";
-            this.btnSalesReportt.Size = new System.Drawing.Size(56, 78);
-            this.btnSalesReportt.TabIndex = 2;
-            this.btnSalesReportt.Tag = "تقرير المبيعات";
-            this.btnSalesReportt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalesReportt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSalesReportt.UseVisualStyleBackColor = true;
-            this.btnSalesReportt.Click += new System.EventHandler(this.btnSalesReport_Click);
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Niagara Engraved", 13F, System.Drawing.FontStyle.Bold);
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageKey = "sales.png";
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(0, 78);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 78);
-            this.button1.TabIndex = 1;
-            this.button1.Tag = "المبيعات";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnProducts
             // 
@@ -246,46 +244,6 @@ namespace Alsoltan_System
             this.sidebarTimer.Interval = 1;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // btnPurchaseReport
-            // 
-            this.btnPurchaseReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPurchaseReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPurchaseReport.FlatAppearance.BorderSize = 0;
-            this.btnPurchaseReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchaseReport.Font = new System.Drawing.Font("Niagara Engraved", 13F, System.Drawing.FontStyle.Bold);
-            this.btnPurchaseReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchaseReport.ImageKey = "sales1.png";
-            this.btnPurchaseReport.ImageList = this.imageList1;
-            this.btnPurchaseReport.Location = new System.Drawing.Point(0, 546);
-            this.btnPurchaseReport.Name = "btnPurchaseReport";
-            this.btnPurchaseReport.Size = new System.Drawing.Size(56, 78);
-            this.btnPurchaseReport.TabIndex = 7;
-            this.btnPurchaseReport.Tag = "تقرير المشتريات";
-            this.btnPurchaseReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPurchaseReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPurchaseReport.UseVisualStyleBackColor = true;
-            this.btnPurchaseReport.Click += new System.EventHandler(this.btnPurchaseReport_Click);
-            // 
-            // btnSalesReport
-            // 
-            this.btnSalesReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalesReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSalesReport.FlatAppearance.BorderSize = 0;
-            this.btnSalesReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalesReport.Font = new System.Drawing.Font("Niagara Engraved", 13F, System.Drawing.FontStyle.Bold);
-            this.btnSalesReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalesReport.ImageKey = "sales1.png";
-            this.btnSalesReport.ImageList = this.imageList1;
-            this.btnSalesReport.Location = new System.Drawing.Point(0, 624);
-            this.btnSalesReport.Name = "btnSalesReport";
-            this.btnSalesReport.Size = new System.Drawing.Size(56, 78);
-            this.btnSalesReport.TabIndex = 8;
-            this.btnSalesReport.Tag = "تقرير المبيعات";
-            this.btnSalesReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalesReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSalesReport.UseVisualStyleBackColor = true;
-            this.btnSalesReport.Click += new System.EventHandler(this.btnSalesReport_Click_1);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -313,9 +271,7 @@ namespace Alsoltan_System
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnSalesReportt;
         private System.Windows.Forms.Button btnSuppliers;
         private System.Windows.Forms.Button btnCustomers;
         private System.Windows.Forms.Button btnPurchaseInvoices;

@@ -28,42 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlControls = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPrintReport = new System.Windows.Forms.Button();
-            this.btnShowReport = new System.Windows.Forms.Button();
             this.cmbCustomers = new System.Windows.Forms.ComboBox();
-            this.المورد = new System.Windows.Forms.Label();
             this.dtpToDate = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.dtpFromDate = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlData = new System.Windows.Forms.Panel();
             this.lblTotalAmount = new System.Windows.Forms.Label();
             this.dgvReport = new System.Windows.Forms.DataGridView();
-            this.pnlControls.SuspendLayout();
-            this.pnlData.SuspendLayout();
+            this.pnlSearch = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
+            this.pnlSearch.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlControls
-            // 
-            this.pnlControls.BackColor = System.Drawing.Color.LightGray;
-            this.pnlControls.Controls.Add(this.btnPrintReport);
-            this.pnlControls.Controls.Add(this.btnShowReport);
-            this.pnlControls.Controls.Add(this.cmbCustomers);
-            this.pnlControls.Controls.Add(this.المورد);
-            this.pnlControls.Controls.Add(this.dtpToDate);
-            this.pnlControls.Controls.Add(this.label2);
-            this.pnlControls.Controls.Add(this.dtpFromDate);
-            this.pnlControls.Controls.Add(this.label1);
-            this.pnlControls.Location = new System.Drawing.Point(12, 12);
-            this.pnlControls.Name = "pnlControls";
-            this.pnlControls.Size = new System.Drawing.Size(776, 100);
-            this.pnlControls.TabIndex = 1;
             // 
             // btnPrintReport
             // 
-            this.btnPrintReport.Location = new System.Drawing.Point(125, 50);
+            this.btnPrintReport.Font = new System.Drawing.Font("GE Dinar One", 10F, System.Drawing.FontStyle.Bold);
+            this.btnPrintReport.Location = new System.Drawing.Point(24, 17);
             this.btnPrintReport.Name = "btnPrintReport";
             this.btnPrintReport.Size = new System.Drawing.Size(100, 30);
             this.btnPrintReport.TabIndex = 7;
@@ -71,105 +58,147 @@
             this.btnPrintReport.UseVisualStyleBackColor = true;
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
             // 
-            // btnShowReport
-            // 
-            this.btnShowReport.Location = new System.Drawing.Point(15, 50);
-            this.btnShowReport.Name = "btnShowReport";
-            this.btnShowReport.Size = new System.Drawing.Size(100, 30);
-            this.btnShowReport.TabIndex = 6;
-            this.btnShowReport.Text = "عرض التقرير";
-            this.btnShowReport.UseVisualStyleBackColor = true;
-            this.btnShowReport.Click += new System.EventHandler(this.btnShowReport_Click);
-            // 
             // cmbCustomers
             // 
+            this.cmbCustomers.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cmbCustomers.FormattingEnabled = true;
-            this.cmbCustomers.Location = new System.Drawing.Point(580, 20);
+            this.cmbCustomers.Location = new System.Drawing.Point(3, 16);
             this.cmbCustomers.Name = "cmbCustomers";
-            this.cmbCustomers.Size = new System.Drawing.Size(175, 27);
+            this.cmbCustomers.Size = new System.Drawing.Size(293, 27);
             this.cmbCustomers.TabIndex = 5;
             this.cmbCustomers.SelectedIndexChanged += new System.EventHandler(this.cmbCustomers_SelectedIndexChanged);
             // 
-            // المورد
-            // 
-            this.المورد.AutoSize = true;
-            this.المورد.Location = new System.Drawing.Point(520, 20);
-            this.المورد.Name = "المورد";
-            this.المورد.Size = new System.Drawing.Size(54, 19);
-            this.المورد.TabIndex = 4;
-            this.المورد.Text = "العميل";
-            // 
             // dtpToDate
             // 
-            this.dtpToDate.Location = new System.Drawing.Point(350, 20);
+            this.dtpToDate.Location = new System.Drawing.Point(781, 21);
             this.dtpToDate.Name = "dtpToDate";
             this.dtpToDate.Size = new System.Drawing.Size(150, 27);
             this.dtpToDate.TabIndex = 3;
             this.dtpToDate.ValueChanged += new System.EventHandler(this.dtpToDate_ValueChanged);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "إلى تاريخ";
-            // 
             // dtpFromDate
             // 
-            this.dtpFromDate.Location = new System.Drawing.Point(100, 20);
+            this.dtpFromDate.Location = new System.Drawing.Point(1095, 16);
             this.dtpFromDate.Name = "dtpFromDate";
             this.dtpFromDate.Size = new System.Drawing.Size(150, 27);
             this.dtpFromDate.TabIndex = 1;
             this.dtpFromDate.ValueChanged += new System.EventHandler(this.dtpFromDate_ValueChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "من تاريخ";
-            // 
-            // pnlData
-            // 
-            this.pnlData.Controls.Add(this.lblTotalAmount);
-            this.pnlData.Controls.Add(this.dgvReport);
-            this.pnlData.Location = new System.Drawing.Point(12, 120);
-            this.pnlData.Name = "pnlData";
-            this.pnlData.Size = new System.Drawing.Size(776, 400);
-            this.pnlData.TabIndex = 2;
-            // 
             // lblTotalAmount
             // 
             this.lblTotalAmount.AutoSize = true;
-            this.lblTotalAmount.Location = new System.Drawing.Point(10, 370);
+            this.lblTotalAmount.Font = new System.Drawing.Font("Khalid Art bold", 12F);
+            this.lblTotalAmount.Location = new System.Drawing.Point(12, 0);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(114, 19);
+            this.lblTotalAmount.Size = new System.Drawing.Size(147, 37);
             this.lblTotalAmount.TabIndex = 8;
             this.lblTotalAmount.Text = "الإجمالي: 0.00";
             // 
             // dgvReport
             // 
+            this.dgvReport.AllowUserToAddRows = false;
+            this.dgvReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReport.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("AlSharkTitle", 16F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReport.Location = new System.Drawing.Point(10, 10);
+            this.dgvReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvReport.Location = new System.Drawing.Point(0, 60);
             this.dgvReport.Name = "dgvReport";
+            this.dgvReport.ReadOnly = true;
+            this.dgvReport.RowHeadersVisible = false;
             this.dgvReport.RowHeadersWidth = 62;
             this.dgvReport.RowTemplate.Height = 29;
             this.dgvReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReport.Size = new System.Drawing.Size(756, 350);
+            this.dgvReport.Size = new System.Drawing.Size(1747, 759);
             this.dgvReport.TabIndex = 0;
+            // 
+            // pnlSearch
+            // 
+            this.pnlSearch.BackColor = System.Drawing.Color.DarkKhaki;
+            this.pnlSearch.Controls.Add(this.btnPrintReport);
+            this.pnlSearch.Controls.Add(this.tableLayoutPanel1);
+            this.pnlSearch.Controls.Add(this.label3);
+            this.pnlSearch.Controls.Add(this.dtpToDate);
+            this.pnlSearch.Controls.Add(this.label5);
+            this.pnlSearch.Controls.Add(this.dtpFromDate);
+            this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSearch.Location = new System.Drawing.Point(0, 0);
+            this.pnlSearch.Name = "pnlSearch";
+            this.pnlSearch.Size = new System.Drawing.Size(1747, 60);
+            this.pnlSearch.TabIndex = 7;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.19388F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.792829F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.02041F));
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cmbCustomers, 2, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1355, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(392, 60);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("AlSharkTitle", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(309, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 49);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "العميل";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Khalid Art bold", 12F);
+            this.label3.Location = new System.Drawing.Point(1251, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 37);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "من تاريخ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Khalid Art bold", 12F);
+            this.label5.Location = new System.Drawing.Point(937, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 37);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "إلى تاريخ";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblTotalAmount);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 819);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1747, 64);
+            this.panel1.TabIndex = 8;
             // 
             // frmSalesReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1329, 883);
-            this.Controls.Add(this.pnlData);
-            this.Controls.Add(this.pnlControls);
+            this.ClientSize = new System.Drawing.Size(1747, 883);
+            this.Controls.Add(this.dgvReport);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlSearch);
             this.Name = "frmSalesReport";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -177,28 +206,29 @@
             this.Text = "frmSalesReport";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmSalesReport_Load);
-            this.pnlControls.ResumeLayout(false);
-            this.pnlControls.PerformLayout();
-            this.pnlData.ResumeLayout(false);
-            this.pnlData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
+            this.pnlSearch.ResumeLayout(false);
+            this.pnlSearch.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlControls;
         private System.Windows.Forms.Button btnPrintReport;
-        private System.Windows.Forms.Button btnShowReport;
         private System.Windows.Forms.ComboBox cmbCustomers;
-        private System.Windows.Forms.Label المورد;
         private System.Windows.Forms.DateTimePicker dtpToDate;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpFromDate;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnlData;
         private System.Windows.Forms.Label lblTotalAmount;
         private System.Windows.Forms.DataGridView dgvReport;
+        private System.Windows.Forms.Panel pnlSearch;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
     }
 }

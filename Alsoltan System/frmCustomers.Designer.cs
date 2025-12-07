@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomers));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtCurrentBalance = new System.Windows.Forms.TextBox();
@@ -48,15 +49,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlData = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pnlData = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.pnlSearch.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlData.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -73,6 +75,16 @@
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "add.png");
+            this.imageList1.Images.SetKeyName(1, "edit.png");
+            this.imageList1.Images.SetKeyName(2, "delete.png");
+            this.imageList1.Images.SetKeyName(3, "save.png");
+            this.imageList1.Images.SetKeyName(4, "cancel.png");
             // 
             // btnCancel
             // 
@@ -180,6 +192,7 @@
             // 
             // dgvCustomers
             // 
+            this.dgvCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCustomers.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(119)))));
@@ -196,14 +209,14 @@
             this.dgvCustomers.RowHeadersWidth = 62;
             this.dgvCustomers.RowTemplate.Height = 29;
             this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomers.Size = new System.Drawing.Size(1748, 875);
+            this.dgvCustomers.Size = new System.Drawing.Size(1108, 815);
             this.dgvCustomers.TabIndex = 3;
             this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
             this.dgvCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellContentClick);
             // 
             // pnlSearch
             // 
-            this.pnlSearch.BackColor = System.Drawing.Color.RosyBrown;
+            this.pnlSearch.BackColor = System.Drawing.Color.DarkKhaki;
             this.pnlSearch.Controls.Add(this.tableLayoutPanel1);
             this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSearch.Location = new System.Drawing.Point(0, 0);
@@ -259,25 +272,6 @@
             this.panel1.Size = new System.Drawing.Size(640, 815);
             this.panel1.TabIndex = 5;
             // 
-            // pnlData
-            // 
-            this.pnlData.BackColor = System.Drawing.Color.Transparent;
-            this.pnlData.Controls.Add(this.btnCancel);
-            this.pnlData.Controls.Add(this.btnSave);
-            this.pnlData.Controls.Add(this.txtCurrentBalance);
-            this.pnlData.Controls.Add(this.lblCurrentBalance);
-            this.pnlData.Controls.Add(this.txtPhone);
-            this.pnlData.Controls.Add(this.txtCustomerName);
-            this.pnlData.Controls.Add(this.lblPhone);
-            this.pnlData.Controls.Add(this.lblCustomerName);
-            this.pnlData.Controls.Add(this.txtCustomerID);
-            this.pnlData.Controls.Add(this.lblCustomerID);
-            this.pnlData.Location = new System.Drawing.Point(43, 180);
-            this.pnlData.Name = "pnlData";
-            this.pnlData.Size = new System.Drawing.Size(594, 314);
-            this.pnlData.TabIndex = 5;
-            this.pnlData.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlData_Paint);
-            // 
             // btnDelete
             // 
             this.btnDelete.AutoSize = true;
@@ -308,15 +302,33 @@
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
-            // imageList1
+            // pnlData
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "add.png");
-            this.imageList1.Images.SetKeyName(1, "edit.png");
-            this.imageList1.Images.SetKeyName(2, "delete.png");
-            this.imageList1.Images.SetKeyName(3, "save.png");
-            this.imageList1.Images.SetKeyName(4, "cancel.png");
+            this.pnlData.BackColor = System.Drawing.Color.Transparent;
+            this.pnlData.Controls.Add(this.btnCancel);
+            this.pnlData.Controls.Add(this.btnSave);
+            this.pnlData.Controls.Add(this.txtCurrentBalance);
+            this.pnlData.Controls.Add(this.lblCurrentBalance);
+            this.pnlData.Controls.Add(this.txtPhone);
+            this.pnlData.Controls.Add(this.txtCustomerName);
+            this.pnlData.Controls.Add(this.lblPhone);
+            this.pnlData.Controls.Add(this.lblCustomerName);
+            this.pnlData.Controls.Add(this.txtCustomerID);
+            this.pnlData.Controls.Add(this.lblCustomerID);
+            this.pnlData.Location = new System.Drawing.Point(43, 180);
+            this.pnlData.Name = "pnlData";
+            this.pnlData.Size = new System.Drawing.Size(594, 314);
+            this.pnlData.TabIndex = 5;
+            this.pnlData.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlData_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvCustomers);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(640, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1108, 815);
+            this.panel2.TabIndex = 6;
             // 
             // frmCustomers
             // 
@@ -324,9 +336,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1748, 875);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlSearch);
-            this.Controls.Add(this.dgvCustomers);
             this.Name = "frmCustomers";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -341,6 +353,7 @@
             this.panel1.PerformLayout();
             this.pnlData.ResumeLayout(false);
             this.pnlData.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -367,5 +380,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
