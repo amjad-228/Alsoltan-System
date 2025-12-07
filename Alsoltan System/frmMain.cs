@@ -125,13 +125,6 @@ namespace Alsoltan_System
             addUserForm.ShowDialog();
         }
 
-        private void btnSalesReport_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new SalesReport());
-            currentPage = "تقرير المبيعات";
-            HighlightCurrentPage();
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmSuppliers());
